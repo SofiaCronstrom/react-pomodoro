@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import './Pomodoro.css'
 export default function Pomodoro(){
 
-     const [minutes, setMinutes] = useState(25);
+     const [minutes, setMinutes] = useState(1);
      const [seconds, setSeconds] = useState(0);
      const [displayMessage, setDisplayMessage] = useState(false);
      const [isActive, setIsActive] = useState(false);
@@ -15,14 +15,18 @@ export default function Pomodoro(){
       setMinutes(25)
       setSeconds(0);
       setIsActive(false);
+      setDisplayMessage(!displayMessage);
     }
 
 
      useEffect (() => {
-      let interval = setInterval(() => {
+      let interval = null;
+       if (isActive){
+      
+       interval = setInterval(() => {
         
       
-         if (seconds === 0 && isActive){
+         if (seconds === 0){
              
             if (minutes !== 0){
                  setSeconds(59);
@@ -39,9 +43,13 @@ export default function Pomodoro(){
         } else {
           setSeconds(seconds - 1);
         }
-        clearInterval(interval);
       }, 1000);
-    }, [seconds, minutes, displayMessage, isActive])
+     
+    } else if (!isActive && seconds !== 0){
+      clearInterval(interval);
+    }
+    return () => clearInterval(interval) 
+    }, [seconds, minutes, displayMessage, isActive]);
      
      const timerMinutes = minutes < 10 ? `0${minutes}` : minutes;
      const timerSeconds = seconds < 10 ? `0${seconds}` : seconds;
