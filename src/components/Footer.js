@@ -2,7 +2,7 @@
 const Footer = () => {
 
     return(
-<div className="header">
+<div className="Footer">
     <h4>Sofia cronström</h4>
 </div>
     )

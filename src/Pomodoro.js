@@ -1,5 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import './Pomodoro.css'
+import Background from './Background.svg'
+
+
+
 export default function Pomodoro(){
 
      const [minutes, setMinutes] = useState(1);
@@ -56,13 +60,13 @@ export default function Pomodoro(){
 
 
     return ( 
-    <div className="pomodoro">
-        
+    <div className="pomodoro" style={{backgroundImage: `url(${Background} )` }}>
+        <div className="row">
         <div className="message">
             {displayMessage && <div>Five minutes strech time</div>}
         </div>
 
-        <div className="row">
+       
             <div className="timer">{timerMinutes} : {timerSeconds}</div>
 
             <button className={`button button-primary button-primary-${isActive ? 'active' : 'inactive'}`} onClick={toggle}>

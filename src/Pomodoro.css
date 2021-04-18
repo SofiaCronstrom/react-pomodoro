@@ -7,35 +7,60 @@
   .header{
     font-family: 'Jost', sans-serif;
     font-weight: lighter;
-    background-color: #001B11;
-    color: #95D09B;
-    min-height: 25vh;
+    background-color: #033825;
+    color: #f0f56c;
+    min-height: 15vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
    
   }
+  .Footer{
+    font-family: 'Jost', sans-serif;
+    font-weight: lighter;
+    background-color: #033825;
+    color: #95D09B;
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
   .pomodoro {
     text-align: center;
-    background-color: #001B11;
-    min-height: 50vh;
+    background-color: #033825;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    color: #D4FDAB;
+    color: #FCFEB4;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
 
-
+.row{
+  background-color:  #033825;
+  padding: .6rem 1.5rem;
+  margin: .7rem;
+  border-radius: 10px;
+}
 
 .timer {
   font-family: 'Jost', sans-serif;
   font-size: 4rem;
   padding: 2rem;
+}
+.message{
+  font-family: 'Jost', sans-serif;
+  font-size: 2rem;
+  padding: 1rem;
+  color: #8BF896;
 }
 
 .button {
@@ -46,30 +71,31 @@
   font-weight: 600;
   font-size: .8rem;
   border-style: groove;
-  background-color:  #001B11;
+  background-color:  #033825;
+
   border: 5px solid #8BF896; 
   color: white;
 }
 
 .button:hover {
   background-color: #8BF896; 
-  border: 5px solid  #001B11;
+  border: 5px solid  #033825;;
   color: #001B11;
 }
 
 .button-primary:hover {
   background-color: #F88B9F; 
-  border: 5px solid  #001B11;
+  border: 5px solid  #033825;
 }
 
 .button-primary-active {
-  background-color:  #001B11;
+  background-color:  #033825;
   border: 5px solid #F88B9F; 
   color: white;
 }
 
 .button-primary-inactive {
-  background-color:  #001B11;
+  background-color:  #033825;
   border: 5px solid #F88B9F; 
   color: white;
 }
