@@ -1,16 +1,18 @@
 import React, {useState, useEffect} from 'react';
 import './Pomodoro.css'
 import Background from './Background.svg'
-
+import Alarm from './sound_cowbell.wav'
+import useSound from 'use-sound';
 
 
 export default function Pomodoro(){
 
-     const [minutes, setMinutes] = useState(1);
+     const [minutes, setMinutes] = useState(25);
      const [seconds, setSeconds] = useState(0);
      const [displayMessage, setDisplayMessage] = useState(false);
      const [isActive, setIsActive] = useState(false);
-    
+     const [play] = useSound(Alarm);
+
      function toggle() {
       setIsActive(!isActive);
     }
@@ -38,10 +40,12 @@ export default function Pomodoro(){
             } else {
                let minutes = displayMessage ? 24 : 4;
                let seconds = 59;
-
+              
+               play();
                setSeconds(seconds);
                setMinutes(minutes);
                setDisplayMessage(!displayMessage);
+               
             }
 
         } else {
@@ -53,7 +57,7 @@ export default function Pomodoro(){
       clearInterval(interval);
     }
     return () => clearInterval(interval) 
-    }, [seconds, minutes, displayMessage, isActive]);
+    }, [seconds, minutes, displayMessage, isActive, play]);
      
      const timerMinutes = minutes < 10 ? `0${minutes}` : minutes;
      const timerSeconds = seconds < 10 ? `0${seconds}` : seconds;
