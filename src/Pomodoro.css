@@ -28,32 +28,40 @@
     justify-content: center;
   }
 
-  .pomodoro {
+  .grid {
     font-family: 'Jost', sans-serif;
     text-align: center;
     background-color: #033825;
     min-height: 60vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: "clock tasks";
     font-size: calc(10px + 2vmin);
     color: #D4FDAB;
     background-position: center;
     background-repeat: no-repeat;
   }
-
+  .clock{
+    background-color:#033825;
+    margin: 10%;
+  }
+  .tasks{
+    margin: 10%;
+  }
 
 .row{
   background-color:  #033825;
   padding: .6rem 1.5rem;
   margin: .7rem;
   border-radius: 10px;
+  
 }
 .length-section{
   display: flex;
   flex-direction: row;
   align-content: center;
+  justify-content: center;
  
 }
 .focus{
@@ -105,7 +113,24 @@
   border: 5px solid #8BF896; 
   color: white;
 }
+.button3 {
+  padding: .6rem 1.5rem;
+  margin: .7rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: .8rem;
+  border-style: groove;
+  background-color:  #033825;
 
+  border: 5px solid #15e8f0; 
+  color: white;
+}
+.button3:hover {
+  background-color: #15e8f0; 
+  border: 5px solid  #033825;;
+  color: #001B11;
+}
 .button:hover {
   background-color: #8BF896; 
   border: 5px solid  #033825;;
@@ -135,3 +160,8 @@
   border: 5px solid #F88B9F; 
   color: white;
 }
+/*.todo-list{
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}*/
