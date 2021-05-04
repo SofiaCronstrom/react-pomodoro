@@ -109,13 +109,13 @@ const App = () => {
       
         <div className="length-section">
         <div className="focus">
-            <h4>Focus time</h4>
+            <h4>FOCUS TIME</h4>
             <input onClick={onSessDecreClick} type="button" value="-" className="button1" />
             <h4>{sessionTime}</h4>
             <input onClick={onSessIncreClick} type="button" value="+" className="button1"/>
           </div>
           <div className="stretch">
-            <h4>Stretch time</h4>
+            <h4>STRETCH TIME</h4>
             <input onClick={onBreakDecreClick} type="button" value="-" className="button1" />
             <h4>{breakTime}</h4>
             <input onClick={onBreakIncreClick} type="button" value="+" className="button1"/>

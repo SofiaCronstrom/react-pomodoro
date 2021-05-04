@@ -7,7 +7,7 @@
   .header{
     font-family: 'Jost', sans-serif;
     font-weight: lighter;
-    background-color: #033825;
+    background-color:#002b1b;
     color: #f0f56c;
     min-height: 20vh;
     display: flex;
@@ -19,7 +19,7 @@
   .Footer{
     font-family: 'Jost', sans-serif;
     font-weight: lighter;
-    background-color: #033825;
+    background-color: #002b1b;
     color: #95D09B;
     min-height: 20vh;
     display: flex;
@@ -39,19 +39,30 @@
     grid-template-areas: "clock tasks";
     font-size: calc(10px + 2vmin);
     color: #D4FDAB;
+    border-radius: 10px;
     background-position: center;
     background-repeat: no-repeat;
   }
   .clock{
-    background-color:#033825;
-    margin: 10%;
+    background-color: #002b1b;
+    margin: 5%;
+    border-radius: 10px;
   }
   .tasks{
-    margin: 10%;
+    margin: 4%;  
+  }
+
+  .todo-text{
+    color: #f0f56c;
+  }
+  .text{
+    height: 25px;
+    border: 2px solid #8BF896 ;
+    border-radius: 4px;
   }
 
 .row{
-  background-color:  #033825;
+  background-color:  #002b1b;
   padding: .6rem 1.5rem;
   margin: .7rem;
   border-radius: 10px;
@@ -90,13 +101,13 @@
   
   font-size: 1rem;
   border-style: groove;
-  background-color:  #033825;
+  background-color:  #002b1b;
   border: 5px solid #f59c28; 
   color: #f59c28;
 }
 .button1:hover {
   background-color: #f59c28; 
-  border: 5px solid  #033825;;
+  border: 5px solid  #002b1b;
   color: #001B11;
 }
 
@@ -108,38 +119,41 @@
   font-weight: 600;
   font-size: .8rem;
   border-style: groove;
-  background-color:  #033825;
+  background-color:  #002b1b;
 
   border: 5px solid #8BF896; 
   color: white;
 }
 .button3 {
-  padding: .6rem 1.5rem;
+  padding: .4rem 1rem;
   margin: .7rem;
   border-radius: 10px;
   text-transform: uppercase;
   font-weight: 600;
-  font-size: .8rem;
+ font-size: .6rem;
   border-style: groove;
-  background-color:  #033825;
-
+  background-color:  #002b1b;
+  
   border: 5px solid #15e8f0; 
   color: white;
 }
 .button3:hover {
   background-color: #15e8f0; 
-  border: 5px solid  #033825;;
+  border: 5px solid  #002b1b;
   color: #001B11;
+}
+.button-task{
+  padding: .6rem 1.5rem;
 }
 .button:hover {
   background-color: #8BF896; 
-  border: 5px solid  #033825;;
+  border: 5px solid  #002b1b;
   color: #001B11;
 }
 
 .button-primary:hover {
   background-color: #F88B9F; 
-  border: 5px solid  #033825;
+  border: 5px solid  #002b1b;
 }
 
 .button-primary {
@@ -150,13 +164,13 @@
   font-weight: 600;
   font-size: .8rem;
   border-style: groove;
-  background-color:  #033825;
+  background-color:  #002b1b;
   border: 5px solid #F88B9F; 
   color: white;
 }
 
 .button-primary-inactive {
-  background-color:  #033825;
+  background-color:  #002b1b;
   border: 5px solid #F88B9F; 
   color: white;
 }

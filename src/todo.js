@@ -62,12 +62,13 @@ const Todo = () => {
         return (
           <div className="pomodoro">
           <div className="row">
-            <h1>Todo List</h1>
+            <h3>TASK LIST</h3>
             <form onSubmit={handleSubmit}>
               <input
                 type="text"
                 onChange={(e) => setTodo(e.target.value)}
                 value={todo}
+                className="text"
               />
               <button className="button3" type="submit">Add task</button>
             </form>
