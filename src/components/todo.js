@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import './Pomodoro.css'
 
 const Todo = () => {
     
-        const [todos, setTodos] = React.useState([]);
-        const [todo, setTodo] = React.useState("");
-        const [todoEditing, setTodoEditing] = React.useState(null);
-        const [editingText, setEditingText] = React.useState("");
+        const [todos, setTodos] = useState([]);
+        const [todo, setTodo] = useState("");
+        const [todoEditing, setTodoEditing] = useState(null);
+        const [editingText, setEditingText] = useState("");
       
-        React.useEffect(() => {
+        useEffect(() => {
           const json = localStorage.getItem("todos");
           const loadedTodos = JSON.parse(json);
           if (loadedTodos) {
@@ -16,7 +16,7 @@ const Todo = () => {
           }
         }, []);
       
-        React.useEffect(() => {
+        useEffect(() => {
           const json = JSON.stringify(todos);
           localStorage.setItem("todos", json);
         }, [todos]);

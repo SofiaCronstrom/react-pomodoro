@@ -1,7 +1,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import './Pomodoro.css';
-
+import Sound from '../sound_cowbell.wav';
 
 const App = () => {
   const [breakTime, setBreakTime] = useState(1);
@@ -136,7 +136,7 @@ const App = () => {
       </div>
       <audio
         id="beep"
-        src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
+        src={Sound}
       />
     </div>
   );

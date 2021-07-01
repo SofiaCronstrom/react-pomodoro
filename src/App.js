@@ -1,8 +1,8 @@
 
 import Header from './components/Header'
-import Pomodoro from './Pomodoro'
+import Pomodoro from './components/Pomodoro'
 import Footer from './components/Footer'
-import Todo from './todo';
+import Todo from './components/todo';
 import Background from './cucumber.svg';
 function App() {
   return (
