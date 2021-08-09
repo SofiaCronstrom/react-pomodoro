@@ -38,15 +38,6 @@ const Todo = () => {
           setTodos(updatedTodos);
         }
       
-        function toggleComplete(id) {
-          let updatedTodos = [...todos].map((todo) => {
-            if (todo.id === id) {
-              todo.completed = !todo.completed;
-            }
-            return todo;
-          });
-          setTodos(updatedTodos);
-        }
       
         function submitEdits(id) {
           const updatedTodos = [...todos].map((todo) => {
@@ -58,6 +49,7 @@ const Todo = () => {
           setTodos(updatedTodos);
           setTodoEditing(null);
         }
+        
       
         return (
           <div className="pomodoro">
@@ -75,12 +67,7 @@ const Todo = () => {
             {todos.map((todo) => (
               <div key={todo.id} className="todo">
                 <div className="todo-text">
-                  <input
-                    type="checkbox"
-                    id="completed"
-                    checked={todo.completed}
-                    onChange={() => toggleComplete(todo.id)}
-                  />
+                 
                   {todo.id === todoEditing ? (
                     <input
                       type="text"
